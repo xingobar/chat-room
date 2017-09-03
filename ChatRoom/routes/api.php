@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('conversations/store','ConversationController@store');
+Route::get('conversations','ConversationController@index');
